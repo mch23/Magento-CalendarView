@@ -358,6 +358,8 @@ var Calendar = Class.create({
             if (isCurrentMonth && this.disableDateCallback(date, this)) {
               cell.addClassName('disabled');
               cell.navAction = 'disabled';
+            } else {
+              delete cell.navAction;
             }
 
             // Set the date to tommorrow
